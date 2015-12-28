@@ -28,7 +28,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<?php
 		echo $this->Html->meta('icon');
 
-		echo $this->Html->css('cake.generic');
+		echo $this->Html->css('bootstrap');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -38,7 +38,37 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 <body>
 	<div id="container">
 		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
+			<nav class="navbar navbar-inverse">
+			  <div class="container-fluid">
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <a class="navbar-brand" href="#">Mi Agenda</a>
+			    </div>
+
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+			      <ul class="nav navbar-nav">
+			        <li class="active">
+			        <?=$this->Html->link('Agenda', array('controller'=>'users', 'action'=>'index'));?>
+			        <span class="sr-only">(current)</span></li>
+			        <li>
+			        <?=$this->Html->link('Agregar', array('controller'=>'users', 'action'=>'add'));?>
+			        </li>
+			     
+			      </ul>
+			      <form class="navbar-form navbar-right" role="search">
+			        <div class="form-group">
+			          <input type="text" class="form-control" placeholder="Search">
+			        </div>
+			        <button type="submit" class="btn btn-default">Submit</button>
+			      </form>
+			    </div>
+			  </div>
+			</nav>
 		</div>
 		<div id="content">
 
@@ -47,17 +77,13 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			<?php echo $this->fetch('content'); ?>
 		</div>
 		<div id="footer">
-			<?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-					'http://www.cakephp.org/',
-					array('target' => '_blank', 'escape' => false, 'id' => 'cake-powered')
-				);
-			?>
-			<p>
-				<?php echo $cakeVersion; ?>
-			</p>
 		</div>
 	</div>
+	<?php
+	echo $this->Html->script('jquery-1.10.2.min');
+	echo $this->Html->script('bootstrap.min');
+	echo $this->Html->script('custom');
+	?>
 	<?php echo $this->element('sql_dump'); ?>
 </body>
 </html>
