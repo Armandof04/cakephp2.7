@@ -60,12 +60,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			        </li>
 			     
 			      </ul>
-			      <form class="navbar-form navbar-right" role="search">
-			        <div class="form-group">
-			          <input type="text" class="form-control" placeholder="Search">
-			        </div>
-			        <button type="submit" class="btn btn-default">Submit</button>
-			      </form>
+			     
 			    </div>
 			  </div>
 			</nav>

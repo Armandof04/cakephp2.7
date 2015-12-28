@@ -40,9 +40,7 @@ class UsersController extends AppController {
     */
     public function add(){
     	if($this->request->is('post'))
-    	{
-            var_dump($this->request->data);
-           
+    	{          
             //Se reciben datos y se acortan los nombres
             $user['User']['first_name']= $this->request->data['User']['first_name'];
             $user['User']['last_name']= $this->request->data['User']['last_name'];
