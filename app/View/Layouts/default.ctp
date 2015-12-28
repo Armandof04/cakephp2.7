@@ -47,7 +47,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 			        <span class="icon-bar"></span>
 			        <span class="icon-bar"></span>
 			      </button>
-			      <a class="navbar-brand" href="#">Mi Agenda</a>
+			       <?=$this->Html->link('Mi Agenda', array('controller'=>'users', 'action'=>'index'), array('class'=>"navbar-brand"));?>
 			    </div>
 
 			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
