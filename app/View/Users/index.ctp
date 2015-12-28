@@ -7,6 +7,7 @@
 
 	<div class="row">
 	<div class="clearfix"></div>
+		<div class="col-md-4"><?=$this->Html->link('Agregar Contacto',   '/users/add/',    array('class' => 'btn btn-primary'));?><br><br></div>
 		<div class="col-md-12">
 			<table class="table table-hover">
 				<tr>
